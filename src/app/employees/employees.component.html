@@ -1,0 +1,21 @@
+<p>employees works!</p>
+
+<table border = "1" style="border-collapse: collapse;">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>Address</th>
+    <th>Gender</th>
+  </tr>
+  <tr *ngFor="let l of listemployees">
+    <td>{{l.id}}</td>
+    <td>{{l.name}}</td>
+    <td>{{l.age}}</td>
+    <td>{{l.address}}</td>
+    <td>{{l.sex}}</td>
+  </tr>
+</table>
+<button (click)="addEmployee()">Them nhan vien</button>
+<br>
+<a routerLink="">Back</a>

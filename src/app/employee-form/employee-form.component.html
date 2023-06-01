@@ -1,0 +1,28 @@
+<form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+  <label>
+    Name:
+    <br>
+    <input type="text" formControlName="name">
+  </label>
+  <br>
+  <label>
+    Age:
+    <br>
+    <input type="text" formControlName="age">
+  </label>
+  <br>
+  <label>
+    Gender:
+    <br>
+    <input type="text" formControlName="sex">
+  </label>
+  <br>
+  <label>
+    Address:
+    <br>
+    <input type="text" formControlName="address">
+  </label>
+  <br>
+
+  <button type="submit" [disabled]="!employeeForm.valid">Dang Ky</button>
+</form>
