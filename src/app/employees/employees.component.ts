@@ -19,8 +19,26 @@ export class EmployeesComponent {
     } );
   }
 
+  public getListemployees(){
+    this.employeeService.getEmployees().subscribe( (data) => {
+      console.log(data);
+      this.listemployees = data;
+    } )
+  }
+
   public addEmployee() {
     this.router.navigate(['employee-form']);
   }
 
+  public deleteEmployee(id: any){
+    console.log('employee id: '+id);
+    this.employeeService.deleteEmployee(Number(id)).subscribe( (data)=>{
+      console.log('delete: ' +data);
+    } )
+    this.getListemployees();
+  }
+
+  public editEmployee(id: any) {
+    this.router.navigate(['employee-form', id]);
+  }
 }

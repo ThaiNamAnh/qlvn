@@ -7,7 +7,8 @@ import { EmployeeFormComponent } from './employee-form/employee-form.component';
 const routes: Routes = [
   {path: '', component:HomeComponent},
   {path: 'employees', component:EmployeesComponent},
-  {path: 'employee-form', component:EmployeeFormComponent}
+  {path: 'employee-form', component:EmployeeFormComponent},
+  {path: 'employee-form/:id', component:EmployeeFormComponent}
 ];
 
 @NgModule({
